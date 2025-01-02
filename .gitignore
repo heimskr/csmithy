@@ -1,0 +1,7 @@
+*.o
+*.why
+*.wasm
+*.bin
+*.cpp
+*.c
+*.ll
