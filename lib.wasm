@@ -1,0 +1,3483 @@
+#meta
+name: "Program"
+
+#debug
+
+#text
+
+%data
+
+%align 8
+@printf_putc
+%1b 1
+
+%align 8
+@printf_serial
+%1b 1
+
+
+%code
+
+@_ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label11
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	[ $s1
+	[ $s2
+	[ $s3
+	[ $s4
+	[ $s5
+	[ $s6
+	[ $s7
+	[ $s8
+	[ $s9
+	[ $sa
+	[ $sb
+	[ $sc
+	[ $sd
+	[ $se
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $s3
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $s4
+	// CopyArguments: $a2:%$4 -> %2
+	$a2 -> $s5
+	// CopyArguments: $a3:%$5 -> %3
+	$a3 -> $s6
+	// CopyArguments: $a4:%$6 -> %4
+	$a4 -> $s7
+	// CopyArguments: $a5:%$7 -> %5
+	$a5 -> $s2
+	// CopyArguments: $a6:%$8 -> %6
+	$a6 -> $s8
+	// CopyArguments: $a7:%$9 -> %7
+	$a7 -> $s9
+	// CopyArguments: $a8:%$10 -> %8
+	$a8 -> $s0
+	// CopyArguments: $a9:%$11 -> %9
+	$a9 -> $t0
+	// CopyArguments: $aa:%$12 -> %10
+	$aa -> $s1
+	// InsertStackSkip
+	32 -> $m9
+	$sp - $m9 -> $sp
+	// LowerMath: no overflow for int value 2 == long value 2
+	$s1 & 2 -> $t1
+	$t1 == 0 -> $sa
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label14 if $sa
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$57
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$57
+	// MovePhi: %9 -> %49 (in new block %$57 whose parent is %11)
+	$t0 -> $sd
+	// MovePhi: %5 -> %50
+	$s2 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label48
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label14
+	$t0 == 0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$51 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label16
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$51
+	// MovePhi: intlike -> %26 (in new block %$51 whose parent is %14)
+	0 -> $sb
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label25
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label16
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s1 & 1 -> $t1
+	$t1 == 0 -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$50 if $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label19
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$50
+	// MovePhi: %9 -> %26 (in new block %$50 whose parent is %16)
+	$t0 -> $sb
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label25
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label19
+	// LowerMath: no overflow for int value 12 == long value 12
+	$s1 & 12 -> $t1
+	$t1 == 0 -> $m3
+	!$m3 -> $t2
+	$t2 | $s8 -> $t3
+	sext8 $t3 -> $t4
+	lui: 0 -> $t4
+	$t4 + $t0 -> $t5
+	// MovePhi: %24 -> %26
+	$t5 -> $sb
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label25
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label25
+	// Ignored for clobbers (move)
+	$s0 -> $a0
+	32 -> $a1
+	:: llvm.umin.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	$t0 -> $sc
+	$sc > $s2 -> $t1 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$55 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$52
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$55
+	// MovePhi: %5 -> %38 (in new block %$55 whose parent is %25)
+	$s2 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label37
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$52
+	// MovePhi: %5 -> %31 (in new block %$52 whose parent is %25)
+	$s2 -> $sc
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label30
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label30
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s1 & 1 -> $t0
+	$t0 == 0 -> $s2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$58 if $s2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label34
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$58
+	// MovePhi: %26 -> %49 (in new block %$58 whose parent is %30)
+	$sb -> $sd
+	// MovePhi: %31 -> %50
+	$sc -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label48
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label34
+	// Ignored for clobbers (move)
+	$sb -> $a0
+	32 -> $a1
+	:: llvm.umin.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	$t0 -> $sd
+	// MovePhi: %31 -> %43
+	$sc -> $se
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label42
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label37
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t1 + 1 -> $t0
+	// LowerGetelementptr(1:1): pointer-type -> %40
+	$t1 * 8
+	$lo -> $t2
+	$t2 + $s7 -> $t2
+	// LowerMemory: imm -> $m1
+	48 -> $m1
+	// LowerMemory: $m1 -> [%40]
+	$m1 -> [$t2] /b
+	$t0 == $sc -> $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$53 if $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$54
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$54
+	// MovePhi: %39 -> %38 (in new block %$54 whose parent is %37)
+	$t0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label37
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$53
+	// MovePhi: %39 -> %31 (in new block %$53 whose parent is %37)
+	$t0 -> $sc
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label30
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label42
+	$se < $sd -> $t0 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label45 if $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$60
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$60
+	// MovePhi: %26 -> %49 (in new block %$60 whose parent is %42)
+	$sb -> $sd
+	// MovePhi: %43 -> %50
+	$se -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label48
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label45
+	// LowerMath: no overflow for int value 1 == long value 1
+	$se + 1 -> $t0
+	// LowerGetelementptr(1:1): pointer-type -> %47
+	$se * 8
+	$lo -> $t1
+	$t1 + $s7 -> $t1
+	// LowerMemory: imm -> $m1
+	48 -> $m1
+	// LowerMemory: $m1 -> [%47]
+	$m1 -> [$t1] /b
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$59 if $s2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$56
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$59
+	// MovePhi: %26 -> %49 (in new block %$59 whose parent is %45)
+	$sb -> $sd
+	// MovePhi: %46 -> %50
+	$t0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label48
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$56
+	// MovePhi: %46 -> %43 (in new block %$56 whose parent is %45)
+	$t0 -> $se
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label42
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label48
+	// LowerMath: no overflow for int value 16 == long value 16
+	$s1 & 16 -> $t0
+	$t0 == 0 -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$68 if $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label53
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$68
+	// MovePhi: %50 -> %97 (in new block %$68 whose parent is %48)
+	$t1 -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label96
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label53
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$s1 & 1024 -> $t0
+	$t0 == 0 -> $t2
+	$t1 == 0 -> $m3
+	!$m3 -> $t3
+	0 -> $t5
+	$t2 ~ 0
+	[$t3 != $t5] -> $t4
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label58 if $t4
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$61
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$61
+	// MovePhi: %50 -> %72 (in new block %$61 whose parent is %53)
+	$t1 -> $t7
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label71
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label58
+	$s0 -> $t0
+	$t1 == $t0 -> $t2
+	$sd -> $t3
+	$t1 == $t3 -> $t4
+	$t2 | $t4 -> $t5
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label64 if $t5
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$62
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$62
+	// MovePhi: %50 -> %72 (in new block %$62 whose parent is %58)
+	$t1 -> $t7
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label71
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label64
+	// LowerMath: no overflow for int value -1 == long value -1
+	$t1 + -1 -> $t0
+	$t0 == 0 -> $m3
+	!$m3 -> $t2
+	$s9 == 16 -> $t3
+	$t3 & $t2 -> $t4
+	// LowerMath: no overflow for int value -2 == long value -2
+	$t1 + -2 -> $t5
+	$t4 ~ 0
+	[$t5 != $t0] -> $t6
+	// MovePhi: %70 -> %72
+	$t6 -> $t7
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label71
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label71
+	$s9 == 16 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label74 if $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label82
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label74
+	// LowerMath: no overflow for int value 32 == long value 32
+	$s1 & 32 -> $t0
+	$t0 == 0 -> $t1
+	$t7 < 32 -> $t2 /u
+	0 -> $t4
+	$t1 ~ 0
+	[$t2 != $t4] -> $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$63 if $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label79
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$63
+	// MovePhi: intlike -> %87 (in new block %$63 whose parent is %74)
+	120 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label86
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label79
+	$t0 == 0 -> $m3
+	!$m3 -> $t1
+	0 -> $t4
+	$t1 ~ 0
+	[$t2 != $t4] -> $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$64 if $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label82
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$64
+	// MovePhi: intlike -> %87 (in new block %$64 whose parent is %79)
+	88 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label86
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label82
+	$s9 == 2 -> $t0
+	$t7 < 32 -> $t1 /u
+	0 -> $t3
+	$t0 ~ 0
+	[$t1 != $t3] -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$65 if $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$66
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$66
+	// MovePhi: %72 -> %91 (in new block %$66 whose parent is %82)
+	$t7 -> $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label90
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$65
+	// MovePhi: intlike -> %87 (in new block %$65 whose parent is %82)
+	98 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label86
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label86
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t7 + 1 -> $t1
+	// LowerGetelementptr(1:1): pointer-type -> %89
+	$t7 * 8
+	$lo -> $t2
+	$t2 + $s7 -> $t2
+	// LowerMemory: %87 -> [%89]
+	$t0 -> [$t2] /b
+	// MovePhi: %88 -> %91
+	$t1 -> $t3
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label90
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label90
+	$t3 < 32 -> $t0 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label93 if $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$67
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$67
+	// MovePhi: %91 -> %97 (in new block %$67 whose parent is %90)
+	$t3 -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label96
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label93
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t3 + 1 -> $t0
+	// LowerGetelementptr(1:1): pointer-type -> %95
+	$t3 * 8
+	$lo -> $t1
+	$t1 + $s7 -> $t1
+	// LowerMemory: imm -> $m1
+	48 -> $m1
+	// LowerMemory: $m1 -> [%95]
+	$m1 -> [$t1] /b
+	// MovePhi: %94 -> %97
+	$t0 -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label96
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label96
+	$t2 < 32 -> $t0 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label99 if $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$73
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$73
+	// MovePhi: %97 -> %111 (in new block %$73 whose parent is %96)
+	$t2 -> $s0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label110
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label99
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$69 if $s8
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label100
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$69
+	// MovePhi: intlike -> %107 (in new block %$69 whose parent is %99)
+	45 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label106
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label100
+	// LowerMath: no overflow for int value 4 == long value 4
+	$s1 & 4 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label103 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$70
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$70
+	// MovePhi: intlike -> %107 (in new block %$70 whose parent is %100)
+	43 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label106
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label103
+	// LowerMath: no overflow for int value 8 == long value 8
+	$s1 & 8 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$72 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$71
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$72
+	// MovePhi: %97 -> %111 (in new block %$72 whose parent is %103)
+	$t2 -> $s0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label110
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$71
+	// MovePhi: intlike -> %107 (in new block %$71 whose parent is %103)
+	32 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label106
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label106
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t2 + 1 -> $t1
+	// LowerGetelementptr(1:1): pointer-type -> %109
+	$t2 * 8
+	$lo -> $t3
+	$t3 + $s7 -> $t3
+	// LowerMemory: %107 -> [%109]
+	$t0 -> [$t3] /b
+	// MovePhi: %108 -> %111
+	$t1 -> $s0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label110
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label110
+	// LowerMath: no overflow for int value 3 == long value 3
+	$s1 & 3 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label114 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$76
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$76
+	// MovePhi: %2 -> %124 (in new block %$76 whose parent is %110)
+	$s5 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label123
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label114
+	$sd -> $s1
+	$s0 < $s1 -> $t0 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$75 if $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$77
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$77
+	// MovePhi: %2 -> %124 (in new block %$77 whose parent is %114)
+	$s5 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label123
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$75
+	// MovePhi: %111 -> %118 (in new block %$75 whose parent is %114)
+	$s0 -> $s2
+	// MovePhi: %2 -> %119
+	$s5 -> $s9
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label117
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label117
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s9 + 1 -> $sb
+	// jump_var -> new_var
+	$s3 -> $t1
+	32 -> $a0
+	// Ignored for clobbers (move)
+	$s4 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	$s6 -> $a3
+	// Clobber $t1
+	// LowerStack: $t1:%$88 -> [$fp - 8]
+	$t1 -> [$fp - 8]
+	// SetupCalls: jump to function pointer %$34
+	:: $t1
+	// Unclobber $t1
+	// LowerStack: [$fp - 8] -> $t1:%$88
+	[$fp - 8] -> $t1
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s2 + 1 -> $s8
+	$s8 == $s1 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$78 if $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$74
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$78
+	// MovePhi: %120 -> %124 (in new block %$78 whose parent is %117)
+	$sb -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label123
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$74
+	// MovePhi: %121 -> %118 (in new block %$74 whose parent is %117)
+	$s8 -> $s2
+	// MovePhi: %120 -> %119
+	$sb -> $s9
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label117
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label123
+	$s0 == 0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$81 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$80
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$81
+	// MovePhi: %124 -> %135 (in new block %$81 whose parent is %123)
+	$t0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label134
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$80
+	// MovePhi: %124 -> %127 (in new block %$80 whose parent is %123)
+	$t0 -> $s1
+	// MovePhi: %111 -> %128
+	$s0 -> $s2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label126
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label126
+	// LowerMath: no overflow for int value -1 == long value -1
+	$s2 + -1 -> $s8
+	// LowerGetelementptr(1:1): pointer-type -> %130
+	$s8 * 8
+	$lo -> $t0
+	$t0 + $s7 -> $t0
+	// LowerMemory(load @ 1:1): [%130] -> %131
+	[$t0] -> $t1 /b
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s1 + 1 -> $s0
+	// jump_var -> new_var
+	$s3 -> $t3
+	// Ignored for clobbers (move)
+	$t1 -> $a0
+	// Ignored for clobbers (move)
+	$s4 -> $a1
+	// Ignored for clobbers (move)
+	$s1 -> $a2
+	// Ignored for clobbers (move)
+	$s6 -> $a3
+	// Clobber $t3
+	// LowerStack: $t3:%$89 -> [$fp - 16]
+	$t3 -> [$fp - 16]
+	// SetupCalls: jump to function pointer %$39
+	:: $t3
+	// Unclobber $t3
+	// LowerStack: [$fp - 16] -> $t3:%$89
+	[$fp - 16] -> $t3
+	$s8 == 0 -> $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$82 if $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$79
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$82
+	// MovePhi: %132 -> %135 (in new block %$82 whose parent is %126)
+	$s0 -> $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label134
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$79
+	// MovePhi: %132 -> %127 (in new block %$79 whose parent is %126)
+	$s0 -> $s1
+	// MovePhi: %129 -> %128
+	$s8 -> $s2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label126
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label134
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$85 if $sa
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label136
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$85
+	// MovePhi: %135 -> %146 (in new block %$85 whose parent is %134)
+	$t1 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label145
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label136
+	$sd -> $s0
+	$t1 - $s5 -> $t0
+	$t0 < $s0 -> $t2 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$84 if $t2
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$86
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$86
+	// MovePhi: %135 -> %146 (in new block %$86 whose parent is %136)
+	$t1 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label145
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$84
+	// MovePhi: %135 -> %141 (in new block %$84 whose parent is %136)
+	$t1 -> $s1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label140
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label140
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s1 + 1 -> $s2
+	// jump_var -> new_var
+	$s3 -> $t2
+	32 -> $a0
+	// Ignored for clobbers (move)
+	$s4 -> $a1
+	// Ignored for clobbers (move)
+	$s1 -> $a2
+	// Ignored for clobbers (move)
+	$s6 -> $a3
+	// Clobber $t2
+	// LowerStack: $t2:%$90 -> [$fp - 24]
+	$t2 -> [$fp - 24]
+	// SetupCalls: jump to function pointer %$44
+	:: $t2
+	// Unclobber $t2
+	// LowerStack: [$fp - 24] -> $t2:%$90
+	[$fp - 24] -> $t2
+	$s2 - $s5 -> $t0
+	$t0 < $s0 -> $t1 /u
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$83 if $t1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$87
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$87
+	// MovePhi: %142 -> %146 (in new block %$87 whose parent is %140)
+	$s2 -> $t0
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label145
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label$83
+	// MovePhi: %142 -> %141 (in new block %$83 whose parent is %140)
+	$s2 -> $s1
+	: ___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label140
+	@___ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj_label145
+	$fp -> $sp
+	$t0 -> $r0
+	] $se
+	] $sd
+	] $sc
+	] $sb
+	] $sa
+	] $s9
+	] $s8
+	] $s7
+	] $s6
+	] $s5
+	] $s4
+	] $s3
+	] $s2
+	] $s1
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@_ZL9_out_nullcPvmm
+	@___ZL9_out_nullcPvmm_label4
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	$sp -> $fp
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	$fp -> $sp
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@_ZL8_out_fctcPvmm
+	@___ZL8_out_fctcPvmm_label4
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	[ $s1
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $s0
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $s1
+	// InsertStackSkip
+	16 -> $m9
+	$sp - $m9 -> $sp
+	$s0 == 0 -> $t2
+	: ___ZL8_out_fctcPvmm_label10 if $t2
+	: ___ZL8_out_fctcPvmm_label6
+	@___ZL8_out_fctcPvmm_label6
+	// LowerMemory(load @ 1:1): [%1] -> %7
+	[$s1] -> $t2
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %8, indices=0,1
+	$s1 -> $t0
+	$t0 + 8 -> $t0
+	// LowerMemory(load @ 1:1): [%8] -> %9
+	[$t0] -> $t1
+	// Ignored for clobbers (move)
+	$s0 -> $a0
+	// Ignored for clobbers (move)
+	$t1 -> $a1
+	// Clobber $t2
+	// LowerStack: $t2:%$12 -> [$fp - 8]
+	$t2 -> [$fp - 8]
+	// SetupCalls: jump to function pointer %7
+	:: $t2
+	// Unclobber $t2
+	// LowerStack: [$fp - 8] -> $t2:%$12
+	[$fp - 8] -> $t2
+	: ___ZL8_out_fctcPvmm_label10
+	@___ZL8_out_fctcPvmm_label10
+	$fp -> $sp
+	] $s1
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@fctprintf
+	@__fctprintf_label3
+	$sp + 24 -> $m2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	[ $s1
+	[ $s2
+	$sp -> $fp
+	// LoadArguments: $sp + to_skip (originally 0) -> %temp
+	// Augmented by 48 bytes
+	$sp + 48 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s0
+	// LoadArguments: $sp + to_skip (originally 8) -> %temp
+	// Augmented by 48 bytes
+	$sp + 56 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s1
+	// LoadArguments: $sp + to_skip (originally 16) -> %temp
+	// Augmented by 48 bytes
+	$sp + 64 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s2
+	: __fctprintf_label$8
+	@__fctprintf_label$8
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %4
+	$sp -> $t1
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %5
+	$sp -> $t2
+	// llvm.va_start removed.
+	// m2 -> [var]
+	$m2 -> [$t1]
+	// LowerMemory: %0 -> [%5]
+	$s0 -> [$t2]
+	// LowerGetelementptr(1:1): struct-type: struct.out_fct_wrap_type* -> %6, indices=0,1
+	$t2 -> $t3
+	$t3 + 8 -> $t3
+	// LowerMemory: %1 -> [%6]
+	$s1 -> [$t3]
+	// LowerMemory(load @ 1:1): [%4] -> %7
+	[$t1] -> $t4
+	&_ZL8_out_fctcPvmm -> $a0
+	// Ignored for clobbers (move)
+	$t2 -> $a1
+	-1 -> $a2
+	// Ignored for clobbers (move)
+	$s2 -> $a3
+	// Ignored for clobbers (move)
+	$t4 -> $a4
+	[ $m2
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	] $m2
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	$fp -> $sp
+	$t0 -> $r0
+	] $s2
+	] $s1
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@vprintf_
+	@__vprintf__label2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $t0
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $t1
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %3
+	$sp -> $t2
+	&_out_char -> $a0
+	// Ignored for clobbers (move)
+	$t2 -> $a1
+	-1 -> $a2
+	// Ignored for clobbers (move)
+	$t0 -> $a3
+	// Ignored for clobbers (move)
+	$t1 -> $a4
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	// SetupCalls: move result from $r0
+	$r0 -> $t3
+	$fp -> $sp
+	$t3 -> $r0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@sprintf_
+	@__sprintf__label2
+	$sp + 16 -> $m2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	[ $s1
+	$sp -> $fp
+	// LoadArguments: $sp + to_skip (originally 0) -> %temp
+	// Augmented by 40 bytes
+	$sp + 40 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s0
+	// LoadArguments: $sp + to_skip (originally 8) -> %temp
+	// Augmented by 40 bytes
+	$sp + 48 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s1
+	: __sprintf__label$7
+	@__sprintf__label$7
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %3
+	$sp -> $t0
+	// llvm.va_start removed.
+	// m2 -> [var]
+	$m2 -> [$t0]
+	// LowerMemory(load @ 1:1): [%3] -> %4
+	[$t0] -> $t1
+	&_ZL11_out_buffercPvmm -> $a0
+	// Ignored for clobbers (move)
+	$s0 -> $a1
+	-1 -> $a2
+	// Ignored for clobbers (move)
+	$s1 -> $a3
+	// Ignored for clobbers (move)
+	$t1 -> $a4
+	[ $m2
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	] $m2
+	// SetupCalls: move result from $r0
+	$r0 -> $t2
+	$fp -> $sp
+	$t2 -> $r0
+	] $s1
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@serprintf
+	@__serprintf_label1
+	$sp + 8 -> $m2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	$sp -> $fp
+	// LoadArguments: $sp + to_skip (originally 0) -> %temp
+	// Augmented by 32 bytes
+	$sp + 32 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s0
+	: __serprintf_label$6
+	@__serprintf_label$6
+	// InsertStackSkip
+	16 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %2
+	$sp -> $t0
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %3
+	$sp -> $t1
+	// LowerMemory(load @ 1:1): [global] -> %var
+	[printf_putc] -> $t2 /b
+	// LowerMemory: imm -> $m1
+	0 -> $m1
+	// LowerMemory: $m1 -> [global]
+	$m1 -> [printf_putc] /b
+	// llvm.va_start removed.
+	// m2 -> [var]
+	$m2 -> [$t0]
+	// LowerMemory(load @ 1:1): [%2] -> %5
+	[$t0] -> $t3
+	&_out_char -> $a0
+	// Ignored for clobbers (move)
+	$t1 -> $a1
+	-1 -> $a2
+	// Ignored for clobbers (move)
+	$s0 -> $a3
+	// Ignored for clobbers (move)
+	$t3 -> $a4
+	[ $m2
+	// Clobber $t2
+	// LowerStack: $t2:%$15 -> [$fp - 8]
+	$t2 -> [$fp - 8]
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	] $m2
+	// SetupCalls: move result from $r0
+	$r0 -> $t4
+	// Unclobber $t2
+	// LowerStack: [$fp - 8] -> $t2:%$15
+	[$fp - 8] -> $t2
+	// LowerMemory: %4 -> [global]
+	$t2 -> [printf_putc] /b
+	$fp -> $sp
+	$t4 -> $r0
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@vsnprintf_
+	@__vsnprintf__label4
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $t0
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $t1
+	// CopyArguments: $a2:%$4 -> %2
+	$a2 -> $t2
+	// CopyArguments: $a3:%$5 -> %3
+	$a3 -> $t3
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	&_ZL11_out_buffercPvmm -> $a0
+	// Ignored for clobbers (move)
+	$t0 -> $a1
+	// Ignored for clobbers (move)
+	$t1 -> $a2
+	// Ignored for clobbers (move)
+	$t2 -> $a3
+	// Ignored for clobbers (move)
+	$t3 -> $a4
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	// SetupCalls: move result from $r0
+	$r0 -> $t4
+	$fp -> $sp
+	$t4 -> $r0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@_ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label5
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	[ $s1
+	[ $s2
+	[ $s3
+	[ $s4
+	[ $s5
+	[ $s6
+	[ $s7
+	[ $s8
+	[ $s9
+	[ $sa
+	[ $sb
+	[ $sc
+	[ $sd
+	[ $se
+	[ $sf
+	[ $s10
+	[ $s11
+	[ $s12
+	[ $s13
+	[ $s14
+	[ $s15
+	[ $s16
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $t0
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $m6
+	// Spill for %1 into location=8
+	// LowerStack: $t1:%1 -> [$fp - 8]
+	$m6 -> [$fp - 8]
+	// CopyArguments: $a2:%$4 -> %2
+	$a2 -> $m6
+	// Spill for %2 into location=16
+	// LowerStack: $t2:%2 -> [$fp - 16]
+	$m6 -> [$fp - 16]
+	// CopyArguments: $a3:%$5 -> %3
+	$a3 -> $t3
+	// CopyArguments: $a4:%$6 -> %4
+	$a4 -> $t4
+	// InsertStackSkip
+	72 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %6
+	$sp -> $s3
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %7
+	$sp -> $s4
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %8
+	$sp -> $s0
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %9
+	$sp -> $s1
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %10
+	$sp -> $s2
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %11
+	$sp -> $s5
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %12
+	$sp -> $s6
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $ta
+	$ta == 0 -> $t5
+	&_ZL9_out_nullcPvmm -> $t9
+	$t5 ~ 0
+	[$t9 != $t0] -> $m6
+	// Spill for %14 into location=24
+	// LowerStack: $t6:%14 -> [$fp - 24]
+	$m6 -> [$fp - 24]
+	// MovePhi: %3 -> %16
+	$t3 -> $t7
+	// MovePhi: intlike -> %17
+	0 -> $t8
+	// MovePhi: %4 -> %18
+	$t4 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label15
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label15
+	// MovePhi: %16 -> %20
+	$t7 -> $s7
+	// MovePhi: %17 -> %21
+	$t8 -> $s9
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label19
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label19
+	// LowerMemory(load @ 1:1): [%20] -> %22
+	[$s7] -> $sa /b
+	$sa == 0 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label552 if $m0
+	$sa == 37 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label26 if $m0
+	// LowerSwitch: default
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label23
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label23
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s9 + 1 -> $t1
+	// Ignored for clobbers (move)
+	$sa -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Clobber $t1
+	// LowerStack: $t1:%$297 -> [$fp - 32]
+	$t1 -> [$fp - 32]
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	:: $t4
+	// Unclobber $t1
+	// LowerStack: [$fp - 32] -> $t1:%$297
+	[$fp - 32] -> $t1
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %25, indices=1
+	$s7 -> $t0
+	$t0 + 1 -> $t0
+	// MovePhi: %25 -> %20
+	$t0 -> $s7
+	// MovePhi: %24 -> %21
+	$t1 -> $s9
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label19
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label26
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %27, indices=1
+	$s7 -> $t0
+	$t0 + 1 -> $t0
+	// MovePhi: %27 -> %29
+	$t0 -> $t1
+	// MovePhi: intlike -> %30
+	0 -> $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label28
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label28
+	// LowerMemory(load @ 1:1): [%29] -> %31
+	[$t1] -> $t0 /b
+	$t0 == 48 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label32 if $m0
+	$t0 == 45 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label35 if $m0
+	$t0 == 43 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label38 if $m0
+	$t0 == 32 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label41 if $m0
+	$t0 == 35 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label44 if $m0
+	// LowerSwitch: default
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$178
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$178
+	// MovePhi: %29 -> %48 (in new block %$178 whose parent is %28)
+	$t1 -> $s7
+	// MovePhi: intlike -> %49
+	-1 -> $t4
+	// MovePhi: %30 -> %50
+	$t2 -> $sa
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label32
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t2 | 1 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %34, indices=1
+	$t1 -> $t3
+	$t3 + 1 -> $t3
+	// MovePhi: %34 -> %48
+	$t3 -> $s7
+	// MovePhi: intlike -> %49
+	0 -> $t4
+	// MovePhi: %33 -> %50
+	$t0 -> $sa
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label35
+	// LowerMath: no overflow for int value 2 == long value 2
+	$t2 | 2 -> $t3
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %37, indices=1
+	$t1 -> $t0
+	$t0 + 1 -> $t0
+	// MovePhi: %37 -> %48
+	$t0 -> $s7
+	// MovePhi: intlike -> %49
+	0 -> $t4
+	// MovePhi: %36 -> %50
+	$t3 -> $sa
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label38
+	// LowerMath: no overflow for int value 4 == long value 4
+	$t2 | 4 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %40, indices=1
+	$t1 -> $t3
+	$t3 + 1 -> $t3
+	// MovePhi: %40 -> %48
+	$t3 -> $s7
+	// MovePhi: intlike -> %49
+	0 -> $t4
+	// MovePhi: %39 -> %50
+	$t0 -> $sa
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label41
+	// LowerMath: no overflow for int value 8 == long value 8
+	$t2 | 8 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %43, indices=1
+	$t1 -> $t3
+	$t3 + 1 -> $t3
+	// MovePhi: %43 -> %48
+	$t3 -> $s7
+	// MovePhi: intlike -> %49
+	0 -> $t4
+	// MovePhi: %42 -> %50
+	$t0 -> $sa
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label44
+	// LowerMath: no overflow for int value 16 == long value 16
+	$t2 | 16 -> $t3
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %46, indices=1
+	$t1 -> $t0
+	$t0 + 1 -> $t0
+	// MovePhi: %46 -> %48
+	$t0 -> $s7
+	// MovePhi: intlike -> %49
+	0 -> $t4
+	// MovePhi: %45 -> %50
+	$t3 -> $sa
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label47
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label51 if $t4
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$177
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$177
+	// MovePhi: %48 -> %29 (in new block %$177 whose parent is %47)
+	$s7 -> $t1
+	// MovePhi: %50 -> %30
+	$sa -> $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label28
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label51
+	// LowerMemory(load @ 1:1): [%48] -> %52
+	[$s7] -> $t0 /b
+	// LowerMath: no overflow for int value -48 == long value -48
+	$t0 + -48 -> $t1
+	$t1 < 10 -> $t2 /u
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$180 if $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label67
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$180
+	// MovePhi: intlike -> %56 (in new block %$180 whose parent is %51)
+	0 -> $t0
+	// MovePhi: %48 -> %57
+	$s7 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label55
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label55
+	$t0 * 10
+	$lo -> $t2
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %59, indices=1
+	$t1 -> $t3
+	$t3 + 1 -> $t3
+	// LowerMemory(load @ 1:1): [%57] -> %60
+	[$t1] -> $t4 /b
+	sext8 $t4 -> $t5
+	lui: 0 -> $t5
+	// LowerMath: no overflow for int value -48 == long value -48
+	$t2 + -48 -> $t6
+	$t6 + $t5 -> $t7
+	// LowerMemory(load @ 1:1): [%59] -> %64
+	[$t3] -> $t8 /b
+	// LowerMath: no overflow for int value -48 == long value -48
+	$t8 + -48 -> $t9
+	$t9 < 10 -> $ta /u
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$179 if $ta
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$182
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$182
+	// MovePhi: %59 -> %79 (in new block %$182 whose parent is %55)
+	$t3 -> $sc
+	// MovePhi: %63 -> %80
+	$t7 -> $sd
+	// MovePhi: %50 -> %81
+	$sa -> $se
+	// MovePhi: %18 -> %82
+	$s8 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label78
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$179
+	// MovePhi: %63 -> %56 (in new block %$179 whose parent is %55)
+	$t7 -> $t0
+	// MovePhi: %59 -> %57
+	$t3 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label55
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label67
+	$t0 == 42 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label69 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$181
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$181
+	// MovePhi: %48 -> %79 (in new block %$181 whose parent is %67)
+	$s7 -> $sc
+	// MovePhi: intlike -> %80
+	0 -> $sd
+	// MovePhi: %50 -> %81
+	$sa -> $se
+	// MovePhi: %18 -> %82
+	$s8 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label78
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label69
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %70, indices=8
+	$s8 -> $t2
+	$t2 + 8 -> $t2
+	// LowerMemory(load @ 1:1): [%18] -> %71
+	[$s8] -> $t1
+	// LowerTrunc: 64 to 32, apply mask
+	$t1 & -1 -> $t3
+	sext32 $t3 -> $t3
+	$t3 < 0 -> $t0
+	// LowerMath: no overflow for int value 2 == long value 2
+	$sa | 2 -> $t4
+	// Ignored for clobbers (move)
+	$t3 -> $a0
+	-1 -> $a1
+	// Clobber $t0
+	// LowerStack: $t0:%$298 -> [$fp - 40]
+	$t0 -> [$fp - 40]
+	// Clobber $t2
+	// LowerStack: $t2:%$299 -> [$fp - 48]
+	$t2 -> [$fp - 48]
+	// Clobber $t4
+	// LowerStack: $t4:%$300 -> [$fp - 56]
+	$t4 -> [$fp - 56]
+	:: llvm.abs.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t5
+	// Unclobber $t4
+	// LowerStack: [$fp - 56] -> $t4:%$300
+	[$fp - 56] -> $t4
+	// Unclobber $t2
+	// LowerStack: [$fp - 48] -> $t2:%$299
+	[$fp - 48] -> $t2
+	// Unclobber $t0
+	// LowerStack: [$fp - 40] -> $t0:%$298
+	[$fp - 40] -> $t0
+	$t0 ~ 0
+	[$t4 != $sa] -> $t6
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %77, indices=1
+	$s7 -> $t7
+	$t7 + 1 -> $t7
+	// MovePhi: %77 -> %79
+	$t7 -> $sc
+	// MovePhi: %75 -> %80
+	$t5 -> $sd
+	// MovePhi: %76 -> %81
+	$t6 -> $se
+	// MovePhi: %70 -> %82
+	$t2 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label78
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label78
+	// LowerMemory(load @ 1:1): [%79] -> %83
+	[$sc] -> $t0 /b
+	$t0 == 46 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label85 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$186
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$186
+	// MovePhi: %79 -> %112 (in new block %$186 whose parent is %78)
+	$sc -> $s8
+	// MovePhi: intlike -> %113
+	0 -> $sa
+	// MovePhi: %81 -> %114
+	$se -> $sf
+	// MovePhi: %82 -> %115
+	$sb -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label111
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label85
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$se | 1024 -> $s7
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %87, indices=1
+	$sc -> $t1
+	$t1 + 1 -> $t1
+	// LowerMemory(load @ 1:1): [%87] -> %88
+	[$t1] -> $t2 /b
+	// LowerMath: no overflow for int value -48 == long value -48
+	$t2 + -48 -> $t3
+	$t3 < 10 -> $t0 /u
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$184 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label103
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$184
+	// MovePhi: intlike -> %92 (in new block %$184 whose parent is %85)
+	0 -> $t2
+	// MovePhi: %87 -> %93
+	$t1 -> $t3
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label91
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label91
+	$t2 * 10
+	$lo -> $t1
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %95, indices=1
+	$t3 -> $t4
+	$t4 + 1 -> $t4
+	// LowerMemory(load @ 1:1): [%93] -> %96
+	[$t3] -> $t0 /b
+	sext8 $t0 -> $t5
+	lui: 0 -> $t5
+	// LowerMath: no overflow for int value -48 == long value -48
+	$t1 + -48 -> $t6
+	$t6 + $t5 -> $t7
+	// LowerMemory(load @ 1:1): [%95] -> %100
+	[$t4] -> $t8 /b
+	// LowerMath: no overflow for int value -48 == long value -48
+	$t8 + -48 -> $t9
+	$t9 < 10 -> $ta /u
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$183 if $ta
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$187
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$187
+	// MovePhi: %95 -> %112 (in new block %$187 whose parent is %91)
+	$t4 -> $s8
+	// MovePhi: %99 -> %113
+	$t7 -> $sa
+	// MovePhi: %86 -> %114
+	$s7 -> $sf
+	// MovePhi: %82 -> %115
+	$sb -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label111
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$183
+	// MovePhi: %99 -> %92 (in new block %$183 whose parent is %91)
+	$t7 -> $t2
+	// MovePhi: %95 -> %93
+	$t4 -> $t3
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label91
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label103
+	$t2 == 42 -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label105 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$185
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$185
+	// MovePhi: %87 -> %112 (in new block %$185 whose parent is %103)
+	$t1 -> $s8
+	// MovePhi: intlike -> %113
+	0 -> $sa
+	// MovePhi: %86 -> %114
+	$s7 -> $sf
+	// MovePhi: %82 -> %115
+	$sb -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label111
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label105
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %106, indices=8
+	$sb -> $t1
+	$t1 + 8 -> $t1
+	// LowerMemory(load @ 1:1): [%82] -> %107
+	[$sb] -> $t2
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t3
+	// Ignored for clobbers (move)
+	$t3 -> $a0
+	0 -> $a1
+	// Clobber $t1
+	// LowerStack: $t1:%$297 -> [$fp - 32]
+	$t1 -> [$fp - 32]
+	:: llvm.smax.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t4
+	// Unclobber $t1
+	// LowerStack: [$fp - 32] -> $t1:%$297
+	[$fp - 32] -> $t1
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %110, indices=2
+	$sc -> $t0
+	$t0 + 2 -> $t0
+	// MovePhi: %110 -> %112
+	$t0 -> $s8
+	// MovePhi: %109 -> %113
+	$t4 -> $sa
+	// MovePhi: %86 -> %114
+	$s7 -> $sf
+	// MovePhi: %106 -> %115
+	$t1 -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label111
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label111
+	// LowerMemory(load @ 1:1): [%112] -> %116
+	[$s8] -> $t0 /b
+	sext8 $t0 -> $t1
+	lui: 0 -> $t1
+	// LowerMath: no overflow for int value -104 == long value -104
+	$t1 + -104 -> $t2
+	// Ignored for clobbers (move)
+	$t2 -> $a0
+	// Ignored for clobbers (move)
+	$t2 -> $a1
+	31 -> $a2
+	:: llvm.fshl.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t3
+	$t3 == 2 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label120 if $m0
+	$t3 == 0 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label128 if $m0
+	$t3 == 6 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label136 if $m0
+	$t3 == 1 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label139 if $m0
+	$t3 == 9 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label142 if $m0
+	// LowerSwitch: default
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$188
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$188
+	// MovePhi: %112 -> %146 (in new block %$188 whose parent is %111)
+	$s8 -> $s7
+	// MovePhi: %114 -> %147
+	$sf -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label120
+	// LowerMath: no overflow for int value 256 == long value 256
+	$sf | 256 -> $t1
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %122, indices=1
+	$s8 -> $t2
+	$t2 + 1 -> $t2
+	// LowerMemory(load @ 1:1): [%122] -> %123
+	[$t2] -> $t0 /b
+	$t0 == 108 -> $t3
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label125 if $t3
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$190
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$190
+	// MovePhi: %122 -> %146 (in new block %$190 whose parent is %120)
+	$t2 -> $s7
+	// MovePhi: %121 -> %147
+	$t1 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label125
+	// LowerMath: no overflow for int value 768 == long value 768
+	$sf | 768 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %127, indices=2
+	$s8 -> $t1
+	$t1 + 2 -> $t1
+	// MovePhi: %127 -> %146
+	$t1 -> $s7
+	// MovePhi: %126 -> %147
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label128
+	// LowerMath: no overflow for int value 128 == long value 128
+	$sf | 128 -> $t1
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %130, indices=1
+	$s8 -> $t2
+	$t2 + 1 -> $t2
+	// LowerMemory(load @ 1:1): [%130] -> %131
+	[$t2] -> $t3 /b
+	$t3 == 104 -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label133 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$189
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$189
+	// MovePhi: %130 -> %146 (in new block %$189 whose parent is %128)
+	$t2 -> $s7
+	// MovePhi: %129 -> %147
+	$t1 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label133
+	// LowerMath: no overflow for int value 192 == long value 192
+	$sf | 192 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %135, indices=2
+	$s8 -> $t1
+	$t1 + 2 -> $t1
+	// MovePhi: %135 -> %146
+	$t1 -> $s7
+	// MovePhi: %134 -> %147
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label136
+	// LowerMath: no overflow for int value 256 == long value 256
+	$sf | 256 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %138, indices=1
+	$s8 -> $t1
+	$t1 + 1 -> $t1
+	// MovePhi: %138 -> %146
+	$t1 -> $s7
+	// MovePhi: %137 -> %147
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label139
+	// LowerMath: no overflow for int value 256 == long value 256
+	$sf | 256 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %141, indices=1
+	$s8 -> $t1
+	$t1 + 1 -> $t1
+	// MovePhi: %141 -> %146
+	$t1 -> $s7
+	// MovePhi: %140 -> %147
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label142
+	// LowerMath: no overflow for int value 256 == long value 256
+	$sf | 256 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %144, indices=1
+	$s8 -> $t1
+	$t1 + 1 -> $t1
+	// MovePhi: %144 -> %146
+	$t1 -> $s7
+	// MovePhi: %143 -> %147
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label145
+	// LowerMemory(load @ 1:1): [%146] -> %148
+	[$s7] -> $s8 /b
+	$s8 == 37 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label544 if $m0
+	$s8 == 112 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label509 if $m0
+	$s8 == 115 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label438 if $m0
+	$s8 == 99 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label410 if $m0
+	$s8 == 120 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$191 if $m0
+	$s8 == 88 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$191 if $m0
+	$s8 == 111 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label149 if $m0
+	$s8 == 98 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label150 if $m0
+	$s8 == 100 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label151 if $m0
+	$s8 == 105 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label151 if $m0
+	$s8 == 117 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label151 if $m0
+	// LowerSwitch: default
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label546
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$191
+	// MovePhi: intlike -> %154 (in new block %$191 whose parent is %145)
+	16 -> $s11
+	// MovePhi: intlike -> %154
+	16 -> $s11
+	// MovePhi: %147 -> %155
+	$sb -> $s12
+	// MovePhi: %147 -> %155
+	$sb -> $s12
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label153
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label149
+	// MovePhi: intlike -> %154
+	8 -> $s11
+	// MovePhi: %147 -> %155
+	$sb -> $s12
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label153
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label150
+	// MovePhi: intlike -> %154
+	2 -> $s11
+	// MovePhi: %147 -> %155
+	$sb -> $s12
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label153
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label151
+	// LowerMath: no overflow for int value -17 == long value -17
+	$sb & -17 -> $t0
+	// MovePhi: intlike -> %154
+	10 -> $s11
+	// MovePhi: %152 -> %155
+	$t0 -> $s12
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label153
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label153
+	$s8 == 88 -> $t1
+	// LowerMath: no overflow for int value 32 == long value 32
+	$s12 | 32 -> $t2
+	$t1 ~ 0
+	[$t2 != $s12] -> $t0
+	$s8 == 105 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$192 if $m0
+	$s8 == 100 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$192 if $m0
+	// LowerSwitch: default
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label159
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$192
+	// MovePhi: %158 -> %162 (in new block %$192 whose parent is %153)
+	$t0 -> $s13
+	// MovePhi: %158 -> %162
+	$t0 -> $s13
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label161
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label159
+	// LowerMath: no overflow for int value -13 == long value -13
+	$t0 & -13 -> $t1
+	// MovePhi: %160 -> %162
+	$t1 -> $s13
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label161
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label161
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$s13 & 1024 -> $t0
+	$t0 == 0 -> $t1
+	// LowerMath: no overflow for int value -2 == long value -2
+	$s13 & -2 -> $t2
+	$t1 ~ 0
+	[$s13 != $t2] -> $t3
+	$s8 == 105 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label167 if $m0
+	$s8 == 100 -> $m0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label167 if $m0
+	// LowerSwitch: default
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label292
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label167
+	// LowerMath: no overflow for int value 512 == long value 512
+	$t3 & 512 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label204 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label170
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label170
+	// LowerMemory(load @ 1:1): [%115] -> %171
+	[$s10] -> $s8
+	$s8 < 0 -> $sb
+	$s8 == 0 -> $m3
+	!$m3 -> $t0
+	// LowerMath: no overflow for int value -17 == long value -17
+	$t3 & -17 -> $t1
+	$t0 ~ 0
+	[$t3 != $t1] -> $sc
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$sc & 1024 -> $t2
+	$t2 == 0 -> $t4
+	$t0 | $t4 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label179 if $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$194
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$194
+	// MovePhi: intlike -> %201 (in new block %$194 whose parent is %170)
+	0 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label200
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label179
+	// Ignored for clobbers (move)
+	$s8 -> $a0
+	-1 -> $a1
+	:: llvm.abs.i64
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	// LowerMath: no overflow for int value 32 == long value 32
+	$sc & 32 -> $t1
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t1 x 97 -> $t2
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t2 + 246 -> $se
+	// MovePhi: intlike -> %185
+	0 -> $sf
+	// MovePhi: %180 -> %186
+	$t0 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label184
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label184
+	$s14 % $s11 -> $t2 /u
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t3
+	$t3 < 10 -> $t4 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t3 | 48 -> $t5
+	$se + $t3 -> $t6
+	$t4 ~ 0
+	[$t5 != $t6] -> $t7
+	// LowerTrunc: 32 to 8, apply mask
+	$t7 & 255 -> $t8
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sf + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %185 -> %195
+	$sf * 1
+	$lo -> $t9
+	$t9 + 0 -> $t9
+	$t9 + $s6 -> $t9
+	// LowerMemory: %193 -> [%195]
+	$t8 -> [$t9] /b
+	$s14 / $s11 -> $t1 /u
+	$s14 >= $s11 -> $ta /u
+	$sf < 31 -> $tb /u
+	$tb & $ta -> $tc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$193 if $tc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$195
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$195
+	// MovePhi: %194 -> %201 (in new block %$195 whose parent is %184)
+	$t0 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label200
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$193
+	// MovePhi: %194 -> %185 (in new block %$193 whose parent is %184)
+	$t0 -> $sf
+	// MovePhi: %196 -> %186
+	$t1 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label184
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label200
+	// LowerTrunc: 64 to 32, apply mask
+	$s11 & -1 -> $t0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	$t4 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Ignored for clobbers (move)
+	$s6 -> $a4
+	// Ignored for clobbers (move)
+	$s8 -> $a5
+	// Ignored for clobbers (move)
+	$sb -> $a6
+	// Ignored for clobbers (move)
+	$t0 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	// Ignored for clobbers (move)
+	$sd -> $a9
+	// Ignored for clobbers (move)
+	$sc -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t1
+	// MovePhi: %203 -> %408
+	$t1 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label204
+	// LowerMath: no overflow for int value 256 == long value 256
+	$t3 & 256 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label241 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label207
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label207
+	// LowerMemory(load @ 1:1): [%115] -> %208
+	[$s10] -> $s8
+	$s8 < 0 -> $sb
+	$s8 == 0 -> $m3
+	!$m3 -> $t0
+	// LowerMath: no overflow for int value -529 == long value -529
+	$t3 & -529 -> $t1
+	$t0 ~ 0
+	[$t3 != $t1] -> $sc
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$sc & 1024 -> $t2
+	$t2 == 0 -> $t4
+	$t0 | $t4 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label216 if $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$197
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$197
+	// MovePhi: intlike -> %238 (in new block %$197 whose parent is %207)
+	0 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label237
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label216
+	// Ignored for clobbers (move)
+	$s8 -> $a0
+	-1 -> $a1
+	:: llvm.abs.i64
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	// LowerMath: no overflow for int value 32 == long value 32
+	$sc & 32 -> $t1
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t1 x 97 -> $t2
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t2 + 246 -> $se
+	// MovePhi: intlike -> %222
+	0 -> $sf
+	// MovePhi: %217 -> %223
+	$t0 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label221
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label221
+	$s14 % $s11 -> $t2 /u
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t3
+	$t3 < 10 -> $t4 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t3 | 48 -> $t5
+	$se + $t3 -> $t6
+	$t4 ~ 0
+	[$t5 != $t6] -> $t7
+	// LowerTrunc: 32 to 8, apply mask
+	$t7 & 255 -> $t8
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sf + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %222 -> %232
+	$sf * 1
+	$lo -> $t9
+	$t9 + 0 -> $t9
+	$t9 + $s5 -> $t9
+	// LowerMemory: %230 -> [%232]
+	$t8 -> [$t9] /b
+	$s14 / $s11 -> $t1 /u
+	$s14 >= $s11 -> $ta /u
+	$sf < 31 -> $tb /u
+	$tb & $ta -> $tc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$196 if $tc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$198
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$198
+	// MovePhi: %231 -> %238 (in new block %$198 whose parent is %221)
+	$t0 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label237
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$196
+	// MovePhi: %231 -> %222 (in new block %$196 whose parent is %221)
+	$t0 -> $sf
+	// MovePhi: %233 -> %223
+	$t1 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label221
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label237
+	// LowerTrunc: 64 to 32, apply mask
+	$s11 & -1 -> $t0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	$t4 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Ignored for clobbers (move)
+	$s5 -> $a4
+	// Ignored for clobbers (move)
+	$s8 -> $a5
+	// Ignored for clobbers (move)
+	$sb -> $a6
+	// Ignored for clobbers (move)
+	$t0 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	// Ignored for clobbers (move)
+	$sd -> $a9
+	// Ignored for clobbers (move)
+	$sc -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t1
+	// MovePhi: %240 -> %408
+	$t1 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label241
+	// LowerMath: no overflow for int value 64 == long value 64
+	$t3 & 64 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label249 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label244
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label244
+	// LowerMemory(load @ 1:1): [%115] -> %245
+	[$s10] -> $t0
+	// LowerTrunc: 64 to 32, apply mask
+	$t0 & -1 -> $t1
+	$t1 << 24 -> $t2
+	lui: 0 -> $t2
+	sext32 $t2 -> $t2
+	$t2 >> 24 -> $t4
+	// MovePhi: %248 -> %258
+	$t4 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label257
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label249
+	// LowerMath: no overflow for int value 128 == long value 128
+	$t3 & 128 -> $t0
+	$t0 == 0 -> $t1
+	// LowerMemory(load @ 1:1): [%115] -> %252
+	[$s10] -> $t2
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t4
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$199 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label254
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$199
+	// MovePhi: %253 -> %258 (in new block %$199 whose parent is %249)
+	$t4 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label257
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label254
+	$t4 << 16 -> $t0
+	lui: 0 -> $t0
+	sext32 $t0 -> $t0
+	$t0 >> 16 -> $t1
+	// MovePhi: %256 -> %258
+	$t1 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label257
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label257
+	sext32 $s8 -> $s8
+	$s8 < 0 -> $sb
+	$s8 == 0 -> $m3
+	!$m3 -> $t0
+	// LowerMath: no overflow for int value -785 == long value -785
+	$t3 & -785 -> $t1
+	$t0 ~ 0
+	[$t3 != $t1] -> $sc
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$sc & 1024 -> $t2
+	$t2 == 0 -> $t4
+	$t0 | $t4 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label266 if $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$201
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$201
+	// MovePhi: intlike -> %289 (in new block %$201 whose parent is %257)
+	0 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label288
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label266
+	// Ignored for clobbers (move)
+	$s8 -> $a0
+	-1 -> $a1
+	:: llvm.abs.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	$t0 -> $t1
+	// LowerMath: no overflow for int value 32 == long value 32
+	$sc & 32 -> $t2
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t2 x 97 -> $t3
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t3 + 246 -> $se
+	// MovePhi: intlike -> %273
+	0 -> $sf
+	// MovePhi: %268 -> %274
+	$t1 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label272
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label272
+	$s14 % $s11 -> $t2 /u
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t3
+	$t3 < 10 -> $t4 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t3 | 48 -> $t5
+	$se + $t3 -> $t6
+	$t4 ~ 0
+	[$t5 != $t6] -> $t7
+	// LowerTrunc: 32 to 8, apply mask
+	$t7 & 255 -> $t8
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sf + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %273 -> %283
+	$sf * 1
+	$lo -> $t9
+	$t9 + 0 -> $t9
+	$t9 + $s2 -> $t9
+	// LowerMemory: %281 -> [%283]
+	$t8 -> [$t9] /b
+	$s14 / $s11 -> $t1 /u
+	$s14 >= $s11 -> $ta /u
+	$sf < 31 -> $tb /u
+	$tb & $ta -> $tc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$200 if $tc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$202
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$202
+	// MovePhi: %282 -> %289 (in new block %$202 whose parent is %272)
+	$t0 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label288
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$200
+	// MovePhi: %282 -> %273 (in new block %$200 whose parent is %272)
+	$t0 -> $sf
+	// MovePhi: %284 -> %274
+	$t1 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label272
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label288
+	// LowerTrunc: 64 to 32, apply mask
+	$s11 & -1 -> $t0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	$t4 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Ignored for clobbers (move)
+	$s2 -> $a4
+	// Ignored for clobbers (move)
+	$s8 -> $a5
+	// Ignored for clobbers (move)
+	$sb -> $a6
+	// Ignored for clobbers (move)
+	$t0 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	// Ignored for clobbers (move)
+	$sd -> $a9
+	// Ignored for clobbers (move)
+	$sc -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t1
+	// MovePhi: %291 -> %408
+	$t1 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label292
+	// LowerMath: no overflow for int value 512 == long value 512
+	$t3 & 512 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label327 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label295
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label295
+	// LowerMemory(load @ 1:1): [%115] -> %296
+	[$s10] -> $t0
+	$t0 == 0 -> $m3
+	!$m3 -> $t1
+	// LowerMath: no overflow for int value -17 == long value -17
+	$t3 & -17 -> $t2
+	$t1 ~ 0
+	[$t3 != $t2] -> $s8
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$s8 & 1024 -> $t4
+	$t4 == 0 -> $t5
+	$t1 | $t5 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label303 if $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$204
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$204
+	// MovePhi: intlike -> %324 (in new block %$204 whose parent is %295)
+	0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label323
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label303
+	// LowerMath: no overflow for int value 32 == long value 32
+	$s8 & 32 -> $t1
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t1 x 97 -> $t2
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t2 + 246 -> $t3
+	// MovePhi: intlike -> %308
+	0 -> $t4
+	// MovePhi: %296 -> %309
+	$t0 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label307
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label307
+	$t5 % $s11 -> $t2 /u
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t6
+	$t6 < 10 -> $t7 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t6 | 48 -> $t8
+	$t3 + $t6 -> $t9
+	$t7 ~ 0
+	[$t8 != $t9] -> $ta
+	// LowerTrunc: 32 to 8, apply mask
+	$ta & 255 -> $tb
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t4 + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %308 -> %318
+	$t4 * 1
+	$lo -> $tc
+	$tc + 0 -> $tc
+	$tc + $s1 -> $tc
+	// LowerMemory: %316 -> [%318]
+	$tb -> [$tc] /b
+	$t5 / $s11 -> $t1 /u
+	$t5 >= $s11 -> $td /u
+	$t4 < 31 -> $te /u
+	$te & $td -> $tf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$203 if $tf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$205
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$205
+	// MovePhi: %317 -> %324 (in new block %$205 whose parent is %307)
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label323
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$203
+	// MovePhi: %317 -> %308 (in new block %$203 whose parent is %307)
+	$t0 -> $t4
+	// MovePhi: %319 -> %309
+	$t1 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label307
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label323
+	// LowerTrunc: 64 to 32, apply mask
+	$s11 & -1 -> $t0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	$t4 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Ignored for clobbers (move)
+	$s1 -> $a4
+	// Ignored for clobbers (move)
+	$sb -> $a5
+	0 -> $a6
+	// Ignored for clobbers (move)
+	$t0 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	// Ignored for clobbers (move)
+	$sd -> $a9
+	// Ignored for clobbers (move)
+	$s8 -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t1
+	// MovePhi: %326 -> %408
+	$t1 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label327
+	// LowerMath: no overflow for int value 256 == long value 256
+	$t3 & 256 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label362 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label330
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label330
+	// LowerMemory(load @ 1:1): [%115] -> %331
+	[$s10] -> $t0
+	$t0 == 0 -> $m3
+	!$m3 -> $t1
+	// LowerMath: no overflow for int value -529 == long value -529
+	$t3 & -529 -> $t2
+	$t1 ~ 0
+	[$t3 != $t2] -> $s8
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$s8 & 1024 -> $t4
+	$t4 == 0 -> $t5
+	$t1 | $t5 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label338 if $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$207
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$207
+	// MovePhi: intlike -> %359 (in new block %$207 whose parent is %330)
+	0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label358
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label338
+	// LowerMath: no overflow for int value 32 == long value 32
+	$s8 & 32 -> $t1
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t1 x 97 -> $t2
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t2 + 246 -> $t3
+	// MovePhi: intlike -> %343
+	0 -> $t4
+	// MovePhi: %331 -> %344
+	$t0 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label342
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label342
+	$t5 % $s11 -> $t2 /u
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t6
+	$t6 < 10 -> $t7 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t6 | 48 -> $t8
+	$t3 + $t6 -> $t9
+	$t7 ~ 0
+	[$t8 != $t9] -> $ta
+	// LowerTrunc: 32 to 8, apply mask
+	$ta & 255 -> $tb
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t4 + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %343 -> %353
+	$t4 * 1
+	$lo -> $tc
+	$tc + 0 -> $tc
+	$tc + $s0 -> $tc
+	// LowerMemory: %351 -> [%353]
+	$tb -> [$tc] /b
+	$t5 / $s11 -> $t1 /u
+	$t5 >= $s11 -> $td /u
+	$t4 < 31 -> $te /u
+	$te & $td -> $tf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$206 if $tf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$208
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$208
+	// MovePhi: %352 -> %359 (in new block %$208 whose parent is %342)
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label358
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$206
+	// MovePhi: %352 -> %343 (in new block %$206 whose parent is %342)
+	$t0 -> $t4
+	// MovePhi: %354 -> %344
+	$t1 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label342
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label358
+	// LowerTrunc: 64 to 32, apply mask
+	$s11 & -1 -> $t0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	$t4 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Ignored for clobbers (move)
+	$s0 -> $a4
+	// Ignored for clobbers (move)
+	$sb -> $a5
+	0 -> $a6
+	// Ignored for clobbers (move)
+	$t0 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	// Ignored for clobbers (move)
+	$sd -> $a9
+	// Ignored for clobbers (move)
+	$s8 -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t1
+	// MovePhi: %361 -> %408
+	$t1 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label362
+	// LowerMath: no overflow for int value 64 == long value 64
+	$t3 & 64 -> $t0
+	$t0 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label368 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label365
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label365
+	// LowerMemory(load @ 1:1): [%115] -> %366
+	[$s10] -> $t0
+	// LowerMath: no overflow for int value 255 == long value 255
+	$t0 & 255 -> $t1
+	// MovePhi: %367 -> %375
+	$t1 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label374
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label368
+	// LowerMath: no overflow for int value 128 == long value 128
+	$t3 & 128 -> $t0
+	$t0 == 0 -> $t1
+	// LowerMemory(load @ 1:1): [%115] -> %371
+	[$s10] -> $t2
+	// LowerMath: no overflow for int value 65535 == long value 65535
+	$t2 & 65535 -> $t4
+	$t1 ~ 0
+	[$t2 != $t4] -> $t5
+	// MovePhi: %373 -> %375
+	$t5 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label374
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label374
+	-1 -> $t8
+	lui: 0 -> $t8
+	// LowerMath: get64'd 4294967295
+	$t6 & $t8 -> $t0
+	$t0 == 0 -> $m3
+	!$m3 -> $t1
+	// LowerMath: no overflow for int value -785 == long value -785
+	$t3 & -785 -> $t2
+	$t1 ~ 0
+	[$t3 != $t2] -> $s8
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$s8 & 1024 -> $t4
+	$t4 == 0 -> $t5
+	$t1 | $t5 -> $t7
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label383 if $t7
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$210
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$210
+	// MovePhi: intlike -> %404 (in new block %$210 whose parent is %374)
+	0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label403
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label383
+	// LowerMath: no overflow for int value 32 == long value 32
+	$s8 & 32 -> $t1
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t1 x 97 -> $t2
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t2 + 246 -> $t3
+	// MovePhi: intlike -> %388
+	0 -> $t4
+	// MovePhi: %376 -> %389
+	$t0 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label387
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label387
+	$t5 % $s11 -> $t2 /u
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t6
+	$t6 < 10 -> $t7 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t6 | 48 -> $t8
+	$t3 + $t6 -> $t9
+	$t7 ~ 0
+	[$t8 != $t9] -> $ta
+	// LowerTrunc: 32 to 8, apply mask
+	$ta & 255 -> $tb
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t4 + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %388 -> %398
+	$t4 * 1
+	$lo -> $tc
+	$tc + 0 -> $tc
+	$tc + $s4 -> $tc
+	// LowerMemory: %396 -> [%398]
+	$tb -> [$tc] /b
+	$t5 / $s11 -> $t1 /u
+	$t5 >= $s11 -> $td /u
+	$t4 < 31 -> $te /u
+	$te & $td -> $tf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$209 if $tf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$211
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$211
+	// MovePhi: %397 -> %404 (in new block %$211 whose parent is %387)
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label403
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$209
+	// MovePhi: %397 -> %388 (in new block %$209 whose parent is %387)
+	$t0 -> $t4
+	// MovePhi: %399 -> %389
+	$t1 -> $t5
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label387
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label403
+	// LowerTrunc: 64 to 32, apply mask
+	$s11 & -1 -> $t0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t4
+	$t4 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t2
+	$t2 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t3
+	$t3 -> $a3
+	// Ignored for clobbers (move)
+	$s4 -> $a4
+	// Ignored for clobbers (move)
+	$sb -> $a5
+	0 -> $a6
+	// Ignored for clobbers (move)
+	$t0 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	// Ignored for clobbers (move)
+	$sd -> $a9
+	// Ignored for clobbers (move)
+	$s8 -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t1
+	// MovePhi: %406 -> %408
+	$t1 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label407
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %409, indices=8
+	$s10 -> $t0
+	$t0 + 8 -> $t0
+	// MovePhi: %408 -> %549
+	$se -> $sb
+	// MovePhi: %409 -> %550
+	$t0 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label410
+	// LowerMath: no overflow for int value 2 == long value 2
+	$sb & 2 -> $t0
+	$t0 == 0 -> $m3
+	!$m3 -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$213 if $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label413
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$213
+	// MovePhi: %21 -> %424 (in new block %$213 whose parent is %410)
+	$s9 -> $sb
+	// MovePhi: intlike -> %425
+	1 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label423
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label413
+	$sd > 1 -> $t0 /u
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label415 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$214
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$214
+	// MovePhi: %21 -> %424 (in new block %$214 whose parent is %413)
+	$s9 -> $sb
+	// MovePhi: intlike -> %425
+	2 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label423
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label415
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sd + 1 -> $sa
+	// MovePhi: intlike -> %418
+	2 -> $sb
+	// MovePhi: %21 -> %419
+	$s9 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label417
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label417
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sc + 1 -> $se
+	32 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$sc -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sb + 1 -> $s9
+	$sb == $sd -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$215 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$212
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$215
+	// MovePhi: %420 -> %424 (in new block %$215 whose parent is %417)
+	$se -> $sb
+	// MovePhi: %416 -> %425
+	$sa -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label423
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$212
+	// MovePhi: %421 -> %418 (in new block %$212 whose parent is %417)
+	$s9 -> $sb
+	// MovePhi: %420 -> %419
+	$se -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label417
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label423
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %426, indices=8
+	$s10 -> $s9
+	$s9 + 8 -> $s9
+	// LowerMemory(load @ 1:1): [%115] -> %427
+	[$s10] -> $t0
+	// LowerTrunc: 64 to 8, apply mask
+	$t0 & 255 -> $t1
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sb + 1 -> $sa
+	// Ignored for clobbers (move)
+	$t1 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t5
+	$t5 -> $a1
+	// Ignored for clobbers (move)
+	$sb -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t6
+	$t6 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t7
+	:: $t7
+	$sc < $sd -> $t2 /u
+	0 -> $t4
+	$s8 ~ 0
+	[$t2 != $t4] -> $t3
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$217 if $t3
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$238
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$238
+	// MovePhi: %429 -> %549 (in new block %$238 whose parent is %423)
+	$sa -> $sb
+	// MovePhi: %426 -> %550
+	$s9 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$217
+	// MovePhi: %425 -> %433 (in new block %$217 whose parent is %423)
+	$sc -> $s8
+	// MovePhi: %429 -> %434
+	$sa -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label432
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label432
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s8 + 1 -> $sa
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sb + 1 -> $se
+	32 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$sb -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	$sa == $sd -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$241 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$216
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$241
+	// MovePhi: %436 -> %549 (in new block %$241 whose parent is %432)
+	$se -> $sb
+	// MovePhi: %426 -> %550
+	$s9 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$216
+	// MovePhi: %435 -> %433 (in new block %$216 whose parent is %432)
+	$sa -> $s8
+	// MovePhi: %436 -> %434
+	$se -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label432
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label438
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %439, indices=8
+	$s10 -> $s8
+	$s8 + 8 -> $s8
+	// LowerMemory(load @ 1:1): [%115] -> %440
+	[$s10] -> $sc
+	$sa == 0 -> $t0
+	$sa -> $t1
+	-1 -> $t7
+	$t0 ~ 0
+	[$t7 != $t1] -> $t2
+	// LowerMemory(load @ 1:1): [%440] -> %444
+	[$sc] -> $t3 /b
+	$t3 == 0 -> $t4
+	$t2 == 0 -> $t5
+	$t5 | $t4 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$220 if $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$219
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$220
+	// MovePhi: %440 -> %458 (in new block %$220 whose parent is %438)
+	$sc -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label457
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$219
+	// MovePhi: %440 -> %449 (in new block %$219 whose parent is %438)
+	$sc -> $t0
+	// MovePhi: %443 -> %450
+	$t2 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label448
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label448
+	// LowerMath: no overflow for int value -1 == long value -1
+	$t1 + -1 -> $t3
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %452, indices=1
+	$t0 -> $t2
+	$t2 + 1 -> $t2
+	// LowerMemory(load @ 1:1): [%452] -> %453
+	[$t2] -> $t4 /b
+	$t4 == 0 -> $t5
+	$t3 == 0 -> $t6
+	-1 -> $t8
+	$t5 ~ 0
+	[$t8 != $t6] -> $t7
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$221 if $t7
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$218
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$221
+	// MovePhi: %452 -> %458 (in new block %$221 whose parent is %448)
+	$t2 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label457
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$218
+	// MovePhi: %452 -> %449 (in new block %$218 whose parent is %448)
+	$t2 -> $t0
+	// MovePhi: %451 -> %450
+	$t3 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label448
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label457
+	$se -> $t0
+	$sc -> $t1
+	$t0 - $t1 -> $t2
+	// LowerTrunc: 64 to 32, apply mask
+	$t2 & -1 -> $t3
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$sb & 1024 -> $t4
+	$t4 == 0 -> $sf
+	// Ignored for clobbers (move)
+	$t3 -> $a0
+	// Ignored for clobbers (move)
+	$sa -> $a1
+	// Clobber $t3
+	// LowerStack: $t3:%$302 -> [$fp - 64]
+	$t3 -> [$fp - 64]
+	:: llvm.umin.i32
+	// SetupCalls: move result from $r0
+	$r0 -> $t5
+	// Unclobber $t3
+	// LowerStack: [$fp - 64] -> $t3:%$302
+	[$fp - 64] -> $t3
+	$sf ~ 0
+	[$t3 != $t5] -> $s10
+	// LowerMath: no overflow for int value 2 == long value 2
+	$sb & 2 -> $t6
+	$t6 == 0 -> $m3
+	!$m3 -> $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$223 if $s14
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label469
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$223
+	// MovePhi: %21 -> %481 (in new block %$223 whose parent is %457)
+	$s9 -> $t1
+	// MovePhi: %466 -> %482
+	$s10 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label480
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label469
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s10 + 1 -> $t0
+	$s10 < $sd -> $t1 /u
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label472 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$224
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$224
+	// MovePhi: %21 -> %481 (in new block %$224 whose parent is %469)
+	$s9 -> $t1
+	// MovePhi: %470 -> %482
+	$t0 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label480
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label472
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sd + 1 -> $sb
+	// MovePhi: %470 -> %475
+	$t0 -> $se
+	// MovePhi: %21 -> %476
+	$s9 -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label474
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label474
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s10 + 1 -> $s15
+	32 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$s10 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	// LowerMath: no overflow for int value 1 == long value 1
+	$se + 1 -> $s9
+	$se == $sd -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$225 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$222
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$225
+	// MovePhi: %477 -> %481 (in new block %$225 whose parent is %474)
+	$s15 -> $t1
+	// MovePhi: %473 -> %482
+	$sb -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label480
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$222
+	// MovePhi: %478 -> %475 (in new block %$222 whose parent is %474)
+	$s9 -> $se
+	// MovePhi: %477 -> %476
+	$s15 -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label474
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label480
+	// LowerMemory(load @ 1:1): [%440] -> %483
+	[$sc] -> $t0 /b
+	$t0 == 0 -> $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$230 if $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$227
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$230
+	// MovePhi: %481 -> %500 (in new block %$230 whose parent is %480)
+	$t1 -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label499
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$227
+	// MovePhi: %483 -> %486 (in new block %$227 whose parent is %480)
+	$t0 -> $s9
+	// MovePhi: %440 -> %487
+	$sc -> $sb
+	// MovePhi: %113 -> %488
+	$sa -> $t2
+	// MovePhi: %481 -> %489
+	$t1 -> $s15
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label485
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label485
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$229 if $sf
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label490
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$229
+	// MovePhi: %488 -> %494 (in new block %$229 whose parent is %485)
+	$t2 -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label493
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label490
+	// LowerMath: no overflow for int value -1 == long value -1
+	$t2 + -1 -> $t0
+	$t2 == 0 -> $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$231 if $t1
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$228
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$231
+	// MovePhi: %489 -> %500 (in new block %$231 whose parent is %490)
+	$s15 -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label499
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$228
+	// MovePhi: %491 -> %494 (in new block %$228 whose parent is %490)
+	$t0 -> $s10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label493
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label493
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %495, indices=1
+	$sb -> $sc
+	$sc + 1 -> $sc
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s15 + 1 -> $s16
+	// Ignored for clobbers (move)
+	$s9 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$s15 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	// LowerMemory(load @ 1:1): [%495] -> %497
+	[$sc] -> $sa /b
+	$sa == 0 -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$232 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$226
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$232
+	// MovePhi: %496 -> %500 (in new block %$232 whose parent is %493)
+	$s16 -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label499
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$226
+	// MovePhi: %497 -> %486 (in new block %$226 whose parent is %493)
+	$sa -> $s9
+	// MovePhi: %495 -> %487
+	$sc -> $sb
+	// MovePhi: %494 -> %488
+	$s10 -> $t2
+	// MovePhi: %496 -> %489
+	$s16 -> $s15
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label485
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label499
+	$se < $sd -> $t1 /u
+	0 -> $t3
+	$s14 ~ 0
+	[$t1 != $t3] -> $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$234 if $t2
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$239
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$239
+	// MovePhi: %500 -> %549 (in new block %$239 whose parent is %499)
+	$t0 -> $sb
+	// MovePhi: %439 -> %550
+	$s8 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$234
+	// MovePhi: %482 -> %504 (in new block %$234 whose parent is %499)
+	$se -> $s9
+	// MovePhi: %500 -> %505
+	$t0 -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label503
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label503
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s9 + 1 -> $sa
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sb + 1 -> $se
+	32 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$sb -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	$sa == $sd -> $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$240 if $t0
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$233
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$240
+	// MovePhi: %507 -> %549 (in new block %$240 whose parent is %503)
+	$se -> $sb
+	// MovePhi: %439 -> %550
+	$s8 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$233
+	// MovePhi: %506 -> %504 (in new block %$233 whose parent is %503)
+	$sa -> $s9
+	// MovePhi: %507 -> %505
+	$se -> $sb
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label503
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label509
+	// LowerMath: no overflow for int value 1 == long value 1
+	$sb | 1 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %511, indices=8
+	$s10 -> $s8
+	$s8 + 8 -> $s8
+	// LowerMemory(load @ 1:1): [%115] -> %512
+	[$s10] -> $t1
+	$t1 == 0 -> $m3
+	!$m3 -> $t2
+	// LowerMath: no overflow for int value -17 == long value -17
+	$t0 & -17 -> $t3
+	$t2 ~ 0
+	[$t0 != $t3] -> $sd
+	// LowerMath: no overflow for int value 1024 == long value 1024
+	$sd & 1024 -> $t4
+	$t4 == 0 -> $t5
+	$t2 | $t5 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label519 if $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$236
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$236
+	// MovePhi: intlike -> %542 (in new block %$236 whose parent is %509)
+	0 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label541
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label519
+	$t1 -> $t0
+	// LowerMath: no overflow for int value 32 == long value 32
+	$sd & 32 -> $t2
+	// LowerMath: no overflow for int value 97 == long value 97
+	$t2 x 97 -> $t3
+	// LowerMath: no overflow for int value 246 == long value 246
+	$t3 + 246 -> $t4
+	// MovePhi: intlike -> %525
+	0 -> $t5
+	// MovePhi: %520 -> %526
+	$t0 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label524
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label524
+	// LowerTrunc: 64 to 32, apply mask
+	$t6 & -1 -> $t2
+	// LowerMath: no overflow for int value 15 == long value 15
+	$t2 & 15 -> $t3
+	// LowerMath: no overflow for int value 14 == long value 14
+	$t2 & 14 -> $t7
+	$t7 < 10 -> $t8 /u
+	// LowerMath: no overflow for int value 48 == long value 48
+	$t3 | 48 -> $t9
+	$t4 + $t3 -> $ta
+	$t8 ~ 0
+	[$t9 != $ta] -> $tb
+	// LowerTrunc: 32 to 8, apply mask
+	$tb & 255 -> $tc
+	// LowerMath: no overflow for int value 1 == long value 1
+	$t5 + 1 -> $t0
+	// LowerGetelementptr(1:1): array/pointer-type, dynamic index %525 -> %536
+	$t5 * 1
+	$lo -> $td
+	$td + 0 -> $td
+	$td + $s3 -> $td
+	// LowerMemory: %534 -> [%536]
+	$tc -> [$td] /b
+	$t6 >>> 4 -> $t1
+	$t6 > 15 -> $te /u
+	$t5 < 31 -> $tf /u
+	$tf & $te -> $t10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$235 if $t10
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$237
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$237
+	// MovePhi: %535 -> %542 (in new block %$237 whose parent is %524)
+	$t0 -> $se
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label541
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label$235
+	// MovePhi: %535 -> %525 (in new block %$235 whose parent is %524)
+	$t0 -> $t5
+	// MovePhi: %537 -> %526
+	$t1 -> $t6
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label524
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label541
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	$t3 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// Ignored for clobbers (move)
+	$s3 -> $a4
+	// Ignored for clobbers (move)
+	$se -> $a5
+	0 -> $a6
+	16 -> $a7
+	// Ignored for clobbers (move)
+	$sa -> $a8
+	16 -> $a9
+	// Ignored for clobbers (move)
+	$sd -> $aa
+	:: _ZL12_ntoa_formatPFvcPvmmEPcmmS2_mbjjjj
+	// SetupCalls: move result from $r0
+	$r0 -> $t0
+	// MovePhi: %543 -> %549
+	$t0 -> $sb
+	// MovePhi: %511 -> %550
+	$s8 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label544
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s9 + 1 -> $t0
+	37 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// Clobber $t0
+	// LowerStack: $t0:%$298 -> [$fp - 40]
+	$t0 -> [$fp - 40]
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	// Unclobber $t0
+	// LowerStack: [$fp - 40] -> $t0:%$298
+	[$fp - 40] -> $t0
+	// MovePhi: %545 -> %549
+	$t0 -> $sb
+	// MovePhi: %115 -> %550
+	$s10 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label546
+	// LowerMath: no overflow for int value 1 == long value 1
+	$s9 + 1 -> $t0
+	// Ignored for clobbers (move)
+	$s8 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t1
+	$t1 -> $a1
+	// Ignored for clobbers (move)
+	$s9 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t2
+	$t2 -> $a3
+	// Clobber $t0
+	// LowerStack: $t0:%$298 -> [$fp - 40]
+	$t0 -> [$fp - 40]
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t3
+	:: $t3
+	// Unclobber $t0
+	// LowerStack: [$fp - 40] -> $t0:%$298
+	[$fp - 40] -> $t0
+	// MovePhi: %547 -> %549
+	$t0 -> $sb
+	// MovePhi: %115 -> %550
+	$s10 -> $sc
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label548
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %551, indices=1
+	$s7 -> $t0
+	$t0 + 1 -> $t0
+	// MovePhi: %551 -> %16
+	$t0 -> $t7
+	// MovePhi: %549 -> %17
+	$sb -> $t8
+	// MovePhi: %550 -> %18
+	$sc -> $s8
+	: ___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label15
+	@___ZL10_vsnprintfPFvcPvmmEPcmPKcS__label552
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t5
+	$s9 < $t5 -> $t0 /u
+	// LowerMath: no overflow for int value -1 == long value -1
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t6
+	$t6 + -1 -> $t1
+	$t0 ~ 0
+	[$s9 != $t1] -> $t2
+	0 -> $a0
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=8
+	// LowerStack: [$fp - 8] -> $t1:%1
+	[$fp - 8] -> $t4
+	$t4 -> $a1
+	// Ignored for clobbers (move)
+	$t2 -> $a2
+	// Ignored for clobbers (move)
+	// Spill: stack load: location=16
+	// LowerStack: [$fp - 16] -> $t2:%2
+	[$fp - 16] -> $t7
+	$t7 -> $a3
+	// SetupCalls: jump to function pointer %14
+	// Spill: stack load: location=24
+	// LowerStack: [$fp - 24] -> $t6:%14
+	[$fp - 24] -> $t8
+	:: $t8
+	// LowerTrunc: 64 to 32, apply mask
+	$s9 & -1 -> $t3
+	$fp -> $sp
+	$t3 -> $r0
+	] $s16
+	] $s15
+	] $s14
+	] $s13
+	] $s12
+	] $s11
+	] $s10
+	] $sf
+	] $se
+	] $sd
+	] $sc
+	] $sb
+	] $sa
+	] $s9
+	] $s8
+	] $s7
+	] $s6
+	] $s5
+	] $s4
+	] $s3
+	] $s2
+	] $s1
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@snprintf_
+	@__snprintf__label3
+	$sp + 24 -> $m2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	[ $s1
+	[ $s2
+	$sp -> $fp
+	// LoadArguments: $sp + to_skip (originally 0) -> %temp
+	// Augmented by 48 bytes
+	$sp + 48 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s0
+	// LoadArguments: $sp + to_skip (originally 8) -> %temp
+	// Augmented by 48 bytes
+	$sp + 56 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s1
+	// LoadArguments: $sp + to_skip (originally 16) -> %temp
+	// Augmented by 48 bytes
+	$sp + 64 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s2
+	: __snprintf__label$8
+	@__snprintf__label$8
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %4
+	$sp -> $t0
+	// llvm.va_start removed.
+	// m2 -> [var]
+	$m2 -> [$t0]
+	// LowerMemory(load @ 1:1): [%4] -> %5
+	[$t0] -> $t1
+	&_ZL11_out_buffercPvmm -> $a0
+	// Ignored for clobbers (move)
+	$s0 -> $a1
+	// Ignored for clobbers (move)
+	$s1 -> $a2
+	// Ignored for clobbers (move)
+	$s2 -> $a3
+	// Ignored for clobbers (move)
+	$t1 -> $a4
+	[ $m2
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	] $m2
+	// SetupCalls: move result from $r0
+	$r0 -> $t2
+	$fp -> $sp
+	$t2 -> $r0
+	] $s2
+	] $s1
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@_ZL11_out_buffercPvmm
+	@___ZL11_out_buffercPvmm_label4
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $t0
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $t1
+	// CopyArguments: $a2:%$4 -> %2
+	$a2 -> $t2
+	// CopyArguments: $a3:%$5 -> %3
+	$a3 -> $t3
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	$t2 < $t3 -> $t4 /u
+	: ___ZL11_out_buffercPvmm_label6 if $t4
+	: ___ZL11_out_buffercPvmm_label8
+	@___ZL11_out_buffercPvmm_label6
+	// LowerGetelementptr(1:1): pointer-type -> %7
+	$t2 * 8
+	$lo -> $t3
+	$t3 + $t1 -> $t3
+	// LowerMemory: %0 -> [%7]
+	$t0 -> [$t3] /b
+	: ___ZL11_out_buffercPvmm_label8
+	@___ZL11_out_buffercPvmm_label8
+	$fp -> $sp
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@tprintf
+	@__tprintf_label1
+	$sp + 8 -> $m2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	$sp -> $fp
+	// LoadArguments: $sp + to_skip (originally 0) -> %temp
+	// Augmented by 32 bytes
+	$sp + 32 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s0
+	: __tprintf_label$6
+	@__tprintf_label$6
+	// InsertStackSkip
+	24 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %2
+	$sp -> $t0
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %3
+	$sp -> $t1
+	// LowerMemory(load @ 1:1): [global] -> %var
+	[printf_putc] -> $t2 /b
+	// LowerMemory(load @ 1:1): [global] -> %var
+	[printf_serial] -> $t3 /b
+	// LowerMemory: imm -> $m1
+	1 -> $m1
+	// LowerMemory: $m1 -> [global]
+	$m1 -> [printf_putc] /b
+	// LowerMemory: imm -> $m1
+	0 -> $m1
+	// LowerMemory: $m1 -> [global]
+	$m1 -> [printf_serial] /b
+	// llvm.va_start removed.
+	// m2 -> [var]
+	$m2 -> [$t0]
+	// LowerMemory(load @ 1:1): [%2] -> %6
+	[$t0] -> $t4
+	&_out_char -> $a0
+	// Ignored for clobbers (move)
+	$t1 -> $a1
+	-1 -> $a2
+	// Ignored for clobbers (move)
+	$s0 -> $a3
+	// Ignored for clobbers (move)
+	$t4 -> $a4
+	[ $m2
+	// Clobber $t2
+	// LowerStack: $t2:%$15 -> [$fp - 8]
+	$t2 -> [$fp - 8]
+	// Clobber $t3
+	// LowerStack: $t3:%$16 -> [$fp - 16]
+	$t3 -> [$fp - 16]
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	] $m2
+	// SetupCalls: move result from $r0
+	$r0 -> $t5
+	// Unclobber $t3
+	// LowerStack: [$fp - 16] -> $t3:%$16
+	[$fp - 16] -> $t3
+	// Unclobber $t2
+	// LowerStack: [$fp - 8] -> $t2:%$15
+	[$fp - 8] -> $t2
+	// LowerMemory: %4 -> [global]
+	$t2 -> [printf_putc] /b
+	// LowerMemory: %5 -> [global]
+	$t3 -> [printf_serial] /b
+	$fp -> $sp
+	$t5 -> $r0
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@printf
+	@__printf_label1
+	$sp + 8 -> $m2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	[ $s0
+	$sp -> $fp
+	// LoadArguments: $sp + to_skip (originally 0) -> %temp
+	// Augmented by 32 bytes
+	$sp + 32 -> $m0
+	// LoadArguments: [%temp] -> %var
+	[$m0] -> $s0
+	: __printf_label$6
+	@__printf_label$6
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %2
+	$sp -> $t0
+	// LowerAlloca: align stack pointer
+	$sp % 8 -> $m0
+	$sp - $m0 -> $sp
+	// LowerAlloca: $sp -= to_sub
+	$sp - 8 -> $sp
+	// LowerAlloca: $sp -> %3
+	$sp -> $t1
+	// llvm.va_start removed.
+	// m2 -> [var]
+	$m2 -> [$t0]
+	// LowerMemory(load @ 1:1): [%2] -> %4
+	[$t0] -> $t2
+	&_out_char -> $a0
+	// Ignored for clobbers (move)
+	$t1 -> $a1
+	-1 -> $a2
+	// Ignored for clobbers (move)
+	$s0 -> $a3
+	// Ignored for clobbers (move)
+	$t2 -> $a4
+	[ $m2
+	:: _ZL10_vsnprintfPFvcPvmmEPcmPKcS_
+	] $m2
+	// SetupCalls: move result from $r0
+	$r0 -> $t3
+	$fp -> $sp
+	$t3 -> $r0
+	] $s0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@strcmp
+	@__strcmp_label2
+	[ $rt
+	[ $fp
+	[ $m5
+	$sp -> $m5
+	$sp -> $fp
+	// CopyArguments: $a0:%$2 -> %0
+	$a0 -> $t0
+	// CopyArguments: $a1:%$3 -> %1
+	$a1 -> $t1
+	// InsertStackSkip
+	8 -> $m9
+	$sp - $m9 -> $sp
+	// LowerMemory(load @ 1:1): [%0] -> %3
+	[$t0] -> $t2 /b
+	// LowerMemory(load @ 1:1): [%1] -> %4
+	[$t1] -> $t3 /b
+	$t2 == $t3 -> $m3
+	!$m3 -> $t4
+	$t2 == 0 -> $t5
+	$t5 | $t4 -> $t6
+	: __strcmp_label$11 if $t6
+	: __strcmp_label$10
+	@__strcmp_label$11
+	// MovePhi: %3 -> %19 (in new block %$11 whose parent is %2)
+	$t2 -> $t0
+	// MovePhi: %4 -> %20
+	$t3 -> $t1
+	: __strcmp_label18
+	@__strcmp_label$10
+	// MovePhi: %1 -> %9 (in new block %$10 whose parent is %2)
+	$t1 -> $t2
+	// MovePhi: %0 -> %10
+	$t0 -> $t3
+	: __strcmp_label8
+	@__strcmp_label8
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %11, indices=1
+	$t3 -> $t0
+	$t0 + 1 -> $t0
+	// LowerGetelementptr(1:1): struct-type: opaque* -> %12, indices=1
+	$t2 -> $t1
+	$t1 + 1 -> $t1
+	// LowerMemory(load @ 1:1): [%11] -> %13
+	[$t0] -> $t4 /b
+	// LowerMemory(load @ 1:1): [%12] -> %14
+	[$t1] -> $t5 /b
+	$t4 == $t5 -> $m3
+	!$m3 -> $t6
+	$t4 == 0 -> $t7
+	$t7 | $t6 -> $t8
+	: __strcmp_label$12 if $t8
+	: __strcmp_label$9
+	@__strcmp_label$12
+	// MovePhi: %13 -> %19 (in new block %$12 whose parent is %8)
+	$t4 -> $t0
+	// MovePhi: %14 -> %20
+	$t5 -> $t1
+	: __strcmp_label18
+	@__strcmp_label$9
+	// MovePhi: %12 -> %9 (in new block %$9 whose parent is %8)
+	$t1 -> $t2
+	// MovePhi: %11 -> %10
+	$t0 -> $t3
+	: __strcmp_label8
+	@__strcmp_label18
+	$t0 -> $t2
+	$t1 -> $t4
+	$t2 - $t4 -> $t3
+	$fp -> $sp
+	$t3 -> $r0
+	] $m5
+	] $fp
+	] $rt
+	: $rt
+
+@_out_char
+	: _out_char.print if $a0
+	: $rt
+	@_out_char.print
+	<prc $a0>
+	: $rt
+
+@llvm.abs.i32
+	sext32 $a0 -> $a0
+	: llvm.abs.i64
+
+@llvm.umin.i32
+	$a0 & 0xffffffff -> $a0
+	$a1 & 0xffffffff -> $a1
+	$a0 ~ $a1
+	[$a0 < $a1] -> $r0
+	: $rt
+
+@llvm.smax.i32
+	sext32 $a0 -> $a0
+	sext32 $a1 -> $a1
+	$a0 ~ $a1
+	[$a0 > $a1] -> $r0
+	: $rt
+
+@llvm.abs.i64
+	$a0 < 0 -> $ma
+	: _llvm.abs.i64_neg if $ma
+	$a0 -> $r0
+	: $rt
+	@_llvm.abs.i64_neg
+	$0 - $a0 -> $r0
+	: $rt
+
+@llvm.fshl.i32
+	lui: 0 -> $a0
+	lui: 0 -> $a1
+	$a2 %= 32
+	$a0 <<= 32
+	$a0 | $a1 -> $r0
+	$r0 <<= $a2
+	$r0 >>>= 32
+	: $rt

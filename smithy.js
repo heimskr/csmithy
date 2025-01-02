@@ -28,8 +28,8 @@ if (!action) {
 	process.exit(1);
 }
 
-function done() {
-	process.exit(0);
+function done(code) {
+	process.exit(code || 0);
 }
 
 function getLang() {
@@ -62,7 +62,13 @@ function getOptimization() {
 	return ["-O0"];
 }
 
-if (action == "gen") {
+async function genLib() {
+	if (!fs.existsSync("lib.why")) {
+		await $`wasmc lib.wasm lib.why`;
+	}
+}
+
+if (["g", "gen", "generate"].includes(action)) {
 	const lang = getLang();
 	let i = 0;
 
@@ -76,7 +82,7 @@ if (action == "gen") {
 	done();
 }
 
-if (action == "verify") {
+if (["v", "ver", "verify"].includes(action)) {
 	const i = positionals[1];
 	if (i === undefined) {
 		throw "Please specify an ID";
@@ -98,10 +104,17 @@ if (action == "verify") {
 	const ll = `${i}.ll`;
 	const optimization = getOptimization();
 	await $`clang++ --std=c++20 -disable-O0-optnone -target mips64el-linux-gnu -S -emit-llvm -Wno-everything ${optimization} ${filename} -o ${ll}`;
+	let wasm = "???";
 	try {
-		await $`ll2w ${ll}`;
+		wasm = await $`ll2w ${ll} -main`.text();
 	} catch (err) {
 		console.log(err.stderr.toString());
+		done(1);
 	}
+	fs.writeFileSync(`${i}.wasm`, wasm);
+	await $`wasmc ${i}.wasm ${i}.base.why`;
+	await genLib();
+	await $`wasmc -l ${i}.why ${i}.base.why lib.why`;
+	console.log(`Why binary has been written to ${i}.why.`);
 	done();
 }

@@ -5,3 +5,4 @@
 *.cpp
 *.c
 *.ll
+!lib.wasm
