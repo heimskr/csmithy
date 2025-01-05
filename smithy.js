@@ -68,6 +68,21 @@ async function genLib() {
 	}
 }
 
+async function assemble(i) {
+	await $`wasmc ${i}.wasm ${i}.base.why`;
+	await genLib();
+	await $`wasmc -l ${i}.why ${i}.base.why lib.why`;
+	console.log(`Why binary has been written to ${i}.why.`);
+}
+
+function getID() {
+	const id = positionals[1];
+	if (id === undefined) {
+		throw "Please specify an ID";
+	}
+	return id;
+}
+
 if (["g", "gen", "generate"].includes(action)) {
 	const lang = getLang();
 	let i = 0;
@@ -83,10 +98,7 @@ if (["g", "gen", "generate"].includes(action)) {
 }
 
 if (["v", "ver", "verify"].includes(action)) {
-	const i = positionals[1];
-	if (i === undefined) {
-		throw "Please specify an ID";
-	}
+	const i = getID();
 
 	const lang = getLang();
 	const filename = `${i}.${lang}`;
@@ -112,9 +124,11 @@ if (["v", "ver", "verify"].includes(action)) {
 		done(1);
 	}
 	fs.writeFileSync(`${i}.wasm`, wasm);
-	await $`wasmc ${i}.wasm ${i}.base.why`;
-	await genLib();
-	await $`wasmc -l ${i}.why ${i}.base.why lib.why`;
-	console.log(`Why binary has been written to ${i}.why.`);
+	await assemble(i);
+	done();
+}
+
+if (["a", "asm", "assemble"].includes(action)) {
+	await assemble(getID());
 	done();
 }
