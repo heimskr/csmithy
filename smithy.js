@@ -70,7 +70,10 @@ async function genLib() {
 
 if (["g", "gen", "generate"].includes(action)) {
 	const lang = getLang();
-	let i = 0;
+	let i = parseInt(positionals[1]);
+	if (isNaN(i)) {
+		i = 0;
+	}
 
 	while (fs.existsSync(`${i}.${lang}`)) {
 		++i;
