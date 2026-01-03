@@ -118,7 +118,7 @@ if (["v", "ver", "verify"].includes(action)) {
 	console.log(`Native checksum: \x1b[32m${nativeChecksum}\x1b[39m`);
 	const ll = `${i}.ll`;
 	const optimization = getOptimization();
-	await $`clang++ --std=c++20 -disable-O0-optnone -target mips64el-linux-gnu -S -emit-llvm -Wno-everything ${optimization} ${filename} -o ${ll}`;
+	await $`clang++ -D_BITS_FLOATN_H --std=c++20 -disable-O0-optnone -target mips64el-linux-gnu -S -emit-llvm -Wno-everything ${optimization} ${filename} -o ${ll}`;
 	let wasm = "???";
 	try {
 		wasm = await $`ll2w ${ll} -main`.text();
